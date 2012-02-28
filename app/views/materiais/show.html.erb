@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Disciplina:</b>
+  <%= @materiai.disciplina %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @materiai.descricao %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @materiai.tipo %>
+</p>
+
+<p>
+  <b>Dtentrada:</b>
+  <%= @materiai.dtentrada %>
+</p>
+
+<p>
+  <b>Dtsaida:</b>
+  <%= @materiai.dtsaida %>
+</p>
+
+
+<%= link_to 'Edit', edit_materiai_path(@materiai) %> |
+<%= link_to 'Back', materiais_path %>

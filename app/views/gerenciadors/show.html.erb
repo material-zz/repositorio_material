@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Login:</b>
+  <%= @gerenciador.login %>
+</p>
+
+<p>
+  <b>Senha:</b>
+  <%= @gerenciador.senha %>
+</p>
+
+
+<%= link_to 'Edit', edit_gerenciador_path(@gerenciador) %> |
+<%= link_to 'Back', gerenciadors_path %>

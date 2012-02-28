@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  disciplina: MyString
+  descricao: MyText
+  tipo: MyString
+  dtentrada: 2012-02-28
+  dtsaida: 2012-02-28
+
+two:
+  disciplina: MyString
+  descricao: MyText
+  tipo: MyString
+  dtentrada: 2012-02-28
+  dtsaida: 2012-02-28
