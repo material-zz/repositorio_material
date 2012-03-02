@@ -28,11 +28,11 @@ feature 'gerenciar curso' do
   end
 
   scenario 'excluir curso' do #, :javascript => true do
-      curso = Curso.create nome: 'informatica'
-      visit curso_path
+	  curso = Curso.create
+    visit cursos_path
 
-      click_link 'Destroy'
+    click_link 'Destroy'
       
-      Curso.count.should == 0
+    Curso.count.should == 0
   end
 end
