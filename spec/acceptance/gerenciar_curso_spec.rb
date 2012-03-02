@@ -15,4 +15,24 @@ feature 'gerenciar curso' do
    
     page.should have_content 'Nome: Informática'
   end
+
+  scenario 'alterar curso' do #, :javascript => true do
+    curso = Curso.create nome: 'informatica'
+    visit edit_curso_path(curso)
+    fill_in 'curso_nome', :with => 'edificações'
+        
+    click_button 'Update Curso'
+   
+    page.should have_content 'Nome: edificações'
+    
+  end
+
+  scenario 'excluir curso' do #, :javascript => true do
+      curso = Curso.create nome: 'informatica'
+      visit curso_path
+
+      click_link 'Destroy'
+      
+      Curso.count.should == 0
+  end
 end
