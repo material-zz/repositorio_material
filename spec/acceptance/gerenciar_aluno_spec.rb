@@ -37,5 +37,13 @@ feature 'gerenciar aluno' do
     page.should have_content 'Curso: informatica'
   end
 
+  scenario 'excluir aluno' do
+    aluno = Aluno.create nome: 'Geraldo'
+    visit alunos_path
+    
+    click_link 'Destroy'   
+
+    Aluno.count == 0
+  end
 
 end
