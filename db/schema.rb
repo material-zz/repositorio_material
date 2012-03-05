@@ -11,34 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228194217) do
+ActiveRecord::Schema.define(:version => 20120305130753) do
 
-  create_table "alunos", :force => true do |t|
+  create_table "bolsista", :force => true do |t|
     t.string   "nome"
-    t.string   "matricula"
-    t.string   "curso"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "turno"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "cursos", :force => true do |t|
     t.string   "nome"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "disciplinas", :force => true do |t|
     t.string   "curso"
     t.integer  "id_aluno"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "gerenciadors", :force => true do |t|
     t.string   "login"
     t.string   "senha"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "materiais", :force => true do |t|
@@ -47,8 +46,8 @@ ActiveRecord::Schema.define(:version => 20120228194217) do
     t.string   "tipo"
     t.date     "dtentrada"
     t.date     "dtsaida"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

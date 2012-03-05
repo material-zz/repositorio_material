@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @bolsistum.nome %>
+</p>
+
+<p>
+  <b>Turno:</b>
+  <%= @bolsistum.turno %>
+</p>
+
+
+<%= link_to 'Edit', edit_bolsistum_path(@bolsistum) %> |
+<%= link_to 'Back', bolsista_path %>
