@@ -7,14 +7,24 @@ feature 'gerenciar materiais' do
   end
   
   scenario 'incluir material' do
-    bolsista = Bolsistum.create nome: 'juca'
     visit new_materiai_path
     
-    fill_in 'materiai_nome', :with => 'Joao'
+    fill_in 'materiai_nome', :with => 'artigo'
   
     click_button 'Salvar'
    
-    page.should have_content 'Nome: Joao'
+    page.should have_content 'Nome: artigo'
+  end
+
+  scenario 'incluir material' do
+    material = Material.create nome: 'artigo'
+    visit edit_materiai_path(material)
+    
+    fill_in 'materiai_nome', :with => 'monografia'
+  
+    click_button 'Salvar'
+   
+    page.should have_content 'Nome: monografia'
   end
 
 
