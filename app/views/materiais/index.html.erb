@@ -2,11 +2,8 @@
 
 <table>
   <tr>
-    <th>Disciplina</th>
-    <th>Descricao</th>
-    <th>Tipo</th>
-    <th>Dtentrada</th>
-    <th>Dtsaida</th>
+    <th>Nome</th>
+    <th>Bolsista</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,11 +11,8 @@
 
 <% @materiais.each do |materiai| %>
   <tr>
-    <td><%= materiai.disciplina %></td>
-    <td><%= materiai.descricao %></td>
-    <td><%= materiai.tipo %></td>
-    <td><%= materiai.dtentrada %></td>
-    <td><%= materiai.dtsaida %></td>
+    <td><%= materiai.nome %></td>
+    <td><%= materiai.bolsista %></td>
     <td><%= link_to 'Show', materiai %></td>
     <td><%= link_to 'Edit', edit_materiai_path(materiai) %></td>
     <td><%= link_to 'Destroy', materiai, confirm: 'Are you sure?', method: :delete %></td>

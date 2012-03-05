@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120305130753) do
+ActiveRecord::Schema.define(:version => 20120305135644) do
+
+  create_table "alunos", :force => true do |t|
+    t.string   "nome"
+    t.string   "matricula"
+    t.integer  "curso_id"
+    t.integer  "materiais_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "alunos", ["curso_id"], :name => "index_alunos_on_curso_id"
+  add_index "alunos", ["materiais_id"], :name => "index_alunos_on_materiais_id"
 
   create_table "bolsista", :force => true do |t|
     t.string   "nome"
@@ -41,13 +53,12 @@ ActiveRecord::Schema.define(:version => 20120305130753) do
   end
 
   create_table "materiais", :force => true do |t|
-    t.string   "disciplina"
-    t.text     "descricao"
-    t.string   "tipo"
-    t.date     "dtentrada"
-    t.date     "dtsaida"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "nome"
+    t.integer  "bolsista_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
+
+  add_index "materiais", ["bolsista_id"], :name => "index_materiais_on_bolsista_id"
 
 end

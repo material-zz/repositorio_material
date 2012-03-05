@@ -1,4 +1,8 @@
 Material::Application.routes.draw do
+  resources :alunos
+
+  resources :materiais
+
   resources :bolsista
 
   resources :cursos
@@ -6,8 +10,6 @@ Material::Application.routes.draw do
   resources :gerenciadors
 
   resources :disciplinas
-
-  resources :materiais
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
