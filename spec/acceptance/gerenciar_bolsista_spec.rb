@@ -28,4 +28,13 @@ feature 'gerenciar bolsista' do
     page.should have_content 'Nome: Zeca'
     
   end
+
+  scenario 'excluir bolsista' do #, :javascript => true do
+	  bolsista = Bolsistum.create
+    visit bolsistum_path
+
+    click_link 'Destroy'
+      
+    Bolsistum.count.should == 0
+  end
 end
