@@ -17,7 +17,7 @@ feature 'gerenciar materiais' do
   end
 
   scenario 'incluir material' do
-    material = Material.create nome: 'artigo'
+    material = Materiai.create nome: 'artigo'
     visit edit_materiai_path(material)
     
     fill_in 'materiai_nome', :with => 'monografia'
