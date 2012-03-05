@@ -31,7 +31,7 @@ feature 'gerenciar bolsista' do
 
   scenario 'excluir bolsista' do #, :javascript => true do
 	  bolsista = Bolsistum.create
-    visit bolsistum_path
+    visit bolsista_path
 
     click_link 'Destroy'
       
