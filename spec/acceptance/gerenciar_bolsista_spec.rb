@@ -18,4 +18,14 @@ feature 'gerenciar bolsista' do
     page.should have_content 'Turno: manha'
   end
 
+  scenario 'alterar bolsista' do #, :javascript => true do
+    bolsista = Bolsistum.create
+    visit edit_bolsistum_path(bolsista)
+    fill_in 'bolsistum_nome', :with => 'Zeca'
+        
+    click_button 'Update Bolsistum'
+   
+    page.should have_content 'Nome: Zeca'
+    
+  end
 end
