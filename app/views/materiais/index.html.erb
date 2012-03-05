@@ -12,7 +12,6 @@
 <% @materiais.each do |materiai| %>
   <tr>
     <td><%= materiai.nome %></td>
-    <td><%= materiai.bolsista %></td>
     <td><%= link_to 'Show', materiai %></td>
     <td><%= link_to 'Edit', edit_materiai_path(materiai) %></td>
     <td><%= link_to 'Destroy', materiai, confirm: 'Are you sure?', method: :delete %></td>
