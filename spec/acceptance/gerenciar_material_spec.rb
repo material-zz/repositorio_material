@@ -16,7 +16,7 @@ feature 'gerenciar materiais' do
     page.should have_content 'Nome: artigo'
   end
 
-  scenario 'incluir material' do
+  scenario 'alterar material' do
     material = Materiai.create nome: 'artigo'
     visit edit_materiai_path(material)
     
@@ -25,6 +25,16 @@ feature 'gerenciar materiais' do
     click_button 'Salvar'
    
     page.should have_content 'Nome: monografia'
+  end
+
+  scenario 'escluir material' do
+    material = Materiai.create nome: 'artigo'
+
+    visit materiais_path
+    
+    click_link 'Destroy'   
+
+    Materiai.count == 0
   end
 
 
