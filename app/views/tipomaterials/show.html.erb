@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>nome:</b>
+  <%= @tipomaterial.nome %>
+</p>
+
+<p>
+  <b>tipo:</b>
+  <%= @tipomaterial.tipo %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipomaterial_path(@tipomaterial) %> |
+<%= link_to 'Back', tipomaterials_path %>

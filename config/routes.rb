@@ -1,4 +1,6 @@
 Material::Application.routes.draw do
+  resources :tipomaterials
+
   resources :alunos
 
   resources :materiais
